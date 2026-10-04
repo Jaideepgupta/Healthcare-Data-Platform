@@ -1,0 +1,21 @@
+doctor_id,doctor_name,specialty,department_id,phone_number,email,hire_date
+DOC101,Dr. Patricia Davis,Radiology,DEP002,4143506818,doctor101@hospital.com,2010-06-14
+DOC102,Dr. William Moore,Neurology,DEP002,5468055063,doctor102@hospital.com,2018-06-03
+DOC103,Dr. Linda Johnson,Neurology,DEP006,4133114792,doctor103@hospital.com,2013-09-13
+DOC104,Dr. Karen White,Orthopedics,DEP001,4434898985,doctor104@hospital.com,2014-08-11
+DOC105,Dr. David White,Pediatrics,DEP005,5277326067,doctor105@hospital.com,2012-02-25
+DOC106,Dr. Maria Jackson,Radiology,DEP003,4234096568,doctor106@hospital.com,2010-02-01
+DOC107,Dr. Susan Johnson,Pediatrics,DEP008,4857596764,doctor107@hospital.com,2010-07-30
+DOC108,Dr. David Davis,Pediatrics,DEP002,4496107065,doctor108@hospital.com,2018-12-01
+DOC109,Dr. Jessica Martin,Pediatrics,DEP002,5664416298,doctor109@hospital.com,2018-04-28
+DOC110,Dr. Richard Thomas,Orthopedics,DEP008,4191628232,doctor110@hospital.com,2019-11-12
+DOC111,Dr. Joseph Moore,General Medicine,DEP005,6423420650,doctor111@hospital.com,2013-05-23
+DOC112,Dr. Jennifer Johnson,Oncology,DEP007,6532855799,doctor112@hospital.com,2022-06-02
+DOC113,Dr. Maria Jackson,Dermatology,DEP008,5012074766,doctor113@hospital.com,2016-09-14
+DOC114,Dr. Robert Jackson,Cardiology,DEP003,8811573993,doctor114@hospital.com,2020-01-27
+DOC115,Dr. Linda Davis,General Medicine,DEP004,4541964762,doctor115@hospital.com,2019-07-01
+DOC116,Dr. Robert White,General Medicine,DEP003,5107613491,doctor116@hospital.com,2011-07-03
+DOC117,Dr. Robert Jackson,Dermatology,DEP006,7679172843,doctor117@hospital.com,2021-08-28
+DOC118,Dr. Joseph Smith,Dermatology,DEP002,5780016559,doctor118@hospital.com,2013-04-29
+DOC119,Dr. Daniel Allen,Neurology,DEP002,8728717922,doctor119@hospital.com,2016-06-01
+DOC120,Dr. Sarah Thomas,Dermatology,DEP005,9940126475,doctor120@hospital.com,2020-11-21

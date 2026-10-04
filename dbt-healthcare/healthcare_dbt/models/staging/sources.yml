@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: bronze
+    catalog: healthcare
+    schema: bronze
+
+    tables:
+      - name: patients
+      - name: doctors
+      - name: insurance_providers
+      - name: departments
+      - name: appointments
+      - name: encounters
+      - name: diagnoses
+      - name: medications
+      - name: procedures
+      - name: billing

@@ -1,0 +1,9 @@
+department_id,department_name,floor_number,manager_name
+DEP001,Emergency,4,Susan Martin
+DEP002,ICU,6,Maria Thompson
+DEP003,OPD,3,Robert Taylor
+DEP004,Surgery,7,Michael Thompson
+DEP005,Radiology,1,Linda Miller
+DEP006,Pharmacy,4,Maria Wilson
+DEP007,Laboratory,1,Joseph Garcia
+DEP008,Billing,6,David Moore

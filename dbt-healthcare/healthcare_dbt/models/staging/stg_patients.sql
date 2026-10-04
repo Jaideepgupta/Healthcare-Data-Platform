@@ -1,0 +1,22 @@
+select
+    patient_id,
+    first_name,
+    last_name,
+    date_of_birth,
+    gender,
+    marital_status,
+    race,
+    ethnicity,
+    language,
+    address,
+    city,
+    state,
+    zip_code,
+    phone_number,
+    email,
+    emergency_contact,
+    primary_physician_id,
+    insurance_provider_id,
+    admission_date,
+    discharge_date
+from {{ source('bronze', 'patients') }}

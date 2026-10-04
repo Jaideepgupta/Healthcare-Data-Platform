@@ -1,0 +1,26 @@
+name: healthcare_dbt
+
+profile: healthcare_dbt
+
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  healthcare_dbt:
+
+    staging:
+      +materialized: view
+      +schema: silver
+
+    intermediate:
+      +materialized: table
+      +schema: silver
+
+    marts:
+      +materialized: table
+      +schema: gold

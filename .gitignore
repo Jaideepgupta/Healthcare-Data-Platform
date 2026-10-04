@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# dbt
+dbt_packages/
+dbt_internal_packages/
+target/
+logs/
+
+# Secrets
+.env
+*.token.txt
+*token*.txt
+*.pem
+*.key
+
+# Databricks local files
+.databricks/
+
+# OS / IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Unrelated dbt demo seeds
+dbt-healthcare/healthcare_dbt/seeds/

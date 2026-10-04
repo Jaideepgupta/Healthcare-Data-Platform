@@ -1,0 +1,11 @@
+insurance_provider_id,provider_name,plan_type,coverage_percent,contact_number
+INS201,Blue Cross,Medicaid,90,4160913827
+INS202,Aetna,EPO,90,8912809809
+INS203,United Health,Medicaid,90,4166569717
+INS204,Cigna,EPO,70,8506670416
+INS205,Medicare,Medicare,80,7852720361
+INS206,Medicaid,HMO,80,5301611123
+INS207,Blue Cross,EPO,90,6941417062
+INS208,Aetna,PPO,70,9585520987
+INS209,United Health,Medicare,80,9452117308
+INS210,Cigna,Medicare,60,4807177651
