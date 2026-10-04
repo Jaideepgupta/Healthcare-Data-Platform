@@ -13,6 +13,7 @@ WITH encounters AS (
         encounter_date,
         admission_source,
         discharge_status
+
     FROM {{ ref('int_encounters') }}
 
 ),
@@ -44,7 +45,9 @@ procedure_summary AS (
 
         COUNT(DISTINCT procedure_id) AS procedure_count,
 
-        SUM(COALESCE(cost, 0)) AS procedure_cost
+        SUM(
+            COALESCE(cost, 0)
+        ) AS procedure_cost
 
     FROM {{ ref('int_procedures') }}
 
@@ -59,11 +62,17 @@ billing_summary AS (
 
         COUNT(DISTINCT bill_id) AS bill_count,
 
-        SUM(COALESCE(total_amount, 0)) AS total_billed_amount,
+        SUM(
+            COALESCE(total_amount, 0)
+        ) AS total_billed_amount,
 
-        SUM(COALESCE(insurance_paid, 0)) AS insurance_paid_amount,
+        SUM(
+            COALESCE(insurance_paid, 0)
+        ) AS insurance_paid_amount,
 
-        SUM(COALESCE(patient_paid, 0)) AS patient_paid_amount,
+        SUM(
+            COALESCE(patient_paid, 0)
+        ) AS patient_paid_amount,
 
         SUM(
             COALESCE(total_amount, 0)
@@ -79,39 +88,51 @@ billing_summary AS (
 
 SELECT
 
+    -- Keys
     e.encounter_id,
-
     e.patient_id,
-
     e.doctor_id,
-
     e.department_id,
 
+    -- Date
     CAST(
         date_format(e.encounter_date, 'yyyyMMdd')
         AS INT
     ) AS date_key,
 
+    -- Encounter attributes
     e.encounter_type,
-
     e.encounter_date,
-
     e.admission_source,
-
     e.discharge_status,
 
-    COALESCE(d.diagnosis_count, 0) AS diagnosis_count,
+    -- Diagnosis metrics
+    COALESCE(
+        d.diagnosis_count,
+        0
+    ) AS diagnosis_count,
 
     COALESCE(
         d.high_severity_diagnosis_count,
         0
     ) AS high_severity_diagnosis_count,
 
-    COALESCE(p.procedure_count, 0) AS procedure_count,
+    -- Procedure metrics
+    COALESCE(
+        p.procedure_count,
+        0
+    ) AS procedure_count,
 
-    COALESCE(p.procedure_cost, 0) AS procedure_cost,
+    COALESCE(
+        p.procedure_cost,
+        0
+    ) AS procedure_cost,
 
-    COALESCE(b.bill_count, 0) AS bill_count,
+    -- Billing metrics
+    COALESCE(
+        b.bill_count,
+        0
+    ) AS bill_count,
 
     COALESCE(
         b.total_billed_amount,
