@@ -25,7 +25,7 @@ A hospital's operational data (patients, doctors, departments, appointments, enc
 | Layer | Where | What happens |
 |---|---|---|
 | **Raw / Bronze** | ADLS Gen2 → Databricks (Unity Catalog `healthcare.bronze`) | 10 CSV datasets ingested as Delta tables, one per source |
-| **Silver** | dbt `staging` (views) + `intermediate` (tables) | Staging selects columns 1:1 from Bronze; intermediate joins and enriches patient, encounter, billing and clinical entities |
+| **Silver** | dbt `staging` (views) + `intermediate` (tables) | Staging selects (and casts where needed) columns from Bronze; intermediate joins and enriches patient, encounter, billing and clinical entities |
 | **Gold** | dbt `marts` (tables) | 5 dimensions + 2 facts, with tests on keys and relationships |
 | **Serving** | Gold tables | Ready for BI (Power BI / Tableau) or SQL analytics |
 
