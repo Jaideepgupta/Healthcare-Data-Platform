@@ -1,12 +1,10 @@
-# 🥪 The Jaffle Shop 🦘
+# healthcare_dbt
 
-_powered by the dbt Fusion engine_
+The dbt project for the [Healthcare Data Platform](../../README.md). It models the Bronze Delta tables in the `healthcare` Unity Catalog into Silver (`staging` views and `intermediate` tables) and a Gold star schema (`marts`).
 
-Welcome! This is a sandbox project for exploring the basic functionality of Fusion. It's based on a fictional restaurant called the Jaffle Shop that serves [jaffles](https://en.wikipedia.org/wiki/Pie_iron).
+```bash
+dbt deps
+dbt build        # models + 20 data tests
+```
 
-To get started:
-1. Set up your database connection in `~/.dbt/profiles.yml`. If you got here by running `dbt init`, you should already be good to go.
-2. Run `dbt build`. That's it!
-
-> [!NOTE]
-> If you're brand-new to dbt, we recommend starting with the [dbt Learn](https://learn.getdbt.com/) platform. It's a free, interactive way to learn dbt, and it's a great way to get started if you're new to the tool.
+See the root README for the model list, grain and design choices.
